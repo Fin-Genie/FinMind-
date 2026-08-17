@@ -1,0 +1,6 @@
+{
+  "name": "CladRb",
+  "description": "Elite Quantitative Financial AI Advisor combining stochastic mathematics, time-series volatility models, portfolio optimization, and charismatic mentorship.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
