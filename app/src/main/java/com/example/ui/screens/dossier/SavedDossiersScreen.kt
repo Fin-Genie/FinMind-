@@ -23,6 +23,8 @@ import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.DeleteOutline
 import androidx.compose.material.icons.filled.FolderOpen
 import androidx.compose.material.icons.filled.Newspaper
+import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.QueryStats
 import androidx.compose.material.icons.filled.Security
 import androidx.compose.material.icons.filled.ShowChart
 import androidx.compose.material.icons.filled.Timeline
@@ -172,6 +174,8 @@ fun DossierCard(
     modifier: Modifier = Modifier
 ) {
     val categoryColor = when (analysis.category) {
+        "MONTE_CARLO" -> PurpleGreeks
+        "GLOBAL_MACRO" -> LilacAccent
         "NEWS_IMPACT" -> EmeraldAccent
         "MARKOWITZ" -> LilacAccent
         "TIME_SERIES" -> CyanAccent
@@ -181,6 +185,8 @@ fun DossierCard(
     }
 
     val icon = when (analysis.category) {
+        "MONTE_CARLO" -> Icons.Default.QueryStats
+        "GLOBAL_MACRO" -> Icons.Default.Public
         "NEWS_IMPACT" -> Icons.Default.Newspaper
         "MARKOWITZ" -> Icons.Default.AutoGraph
         "TIME_SERIES" -> Icons.Default.Timeline

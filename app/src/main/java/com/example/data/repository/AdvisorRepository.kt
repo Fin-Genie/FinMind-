@@ -124,6 +124,63 @@ class AdvisorRepository(
     private fun generateLocalQuantResponse(prompt: String): String {
         val lower = prompt.lowercase()
         return when {
+            lower.contains("macro") || lower.contains("indicator") || lower.contains("inflation") || lower.contains("interest rate") || lower.contains("gdp") || lower.contains("unemployment") || lower.contains("billionaire") -> {
+                """
+                ### CladRb Global Macro Dossier: Sovereign Economic Indicators & Asset Transmission
+
+                To amass sovereign-scale generational wealth and navigate systemic macro cycles, one must understand how **Inflation, Benchmark Interest Rates, Real GDP Growth, and Unemployment** establish the overarching hurdle rate and liquidity tides of all capital markets.
+
+                #### 1. Current Global Macroeconomic Matrix
+                | Economy | CPI Inflation (YoY) | Policy Benchmark Rate | Real Policy Rate (r = i - π) | Real GDP Growth | Unemployment Rate | Macroeconomic Regime |
+                | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+                | 🇺🇸 **United States** | **2.6%** | **4.25%** | **+1.65%** | **2.3%** | **4.1%** | **Goldilocks / Non-Inflationary Growth** |
+                | 🇪🇺 **Eurozone** | **2.1%** | **2.50%** | **+0.40%** | **1.0%** | **6.2%** | **Disinflationary Slowdown** |
+                | 🇯🇵 **Japan** | **2.5%** | **0.75%** | **-1.75%** | **1.2%** | **2.4%** | **Secular Exit from Deflation** |
+                | 🇬🇧 **United Kingdom** | **2.4%** | **3.75%** | **+1.35%** | **1.2%** | **4.2%** | **Disinflation / Gradual Normalization** |
+                | 🇨🇳 **China** | **0.9%** | **2.75%** | **+1.85%** | **4.9%** | **5.0%** | **Credit Reflation & Industrial Policy** |
+                | 🇮🇳 **India** | **4.3%** | **5.75%** | **+1.45%** | **7.2%** | **6.8%** | **High-Growth Capital Formation** |
+                | 🇧🇷 **Brazil** | **3.9%** | **10.50%** | **+6.60%** | **3.1%** | **6.2%** | **High Real Rate Carry Magnet** |
+
+                #### 2. Transmission Mechanics & Cross-Asset Implications
+                - **The Real Interest Rate Equation (r = i - π):** When real yields are structurally positive (+1.5% to +2.0%), equity multiple expansion requires genuine free cash flow compounding rather than cheap leverage.
+                - **Taylor Rule Discipline:** Current US Fed policy benchmark (4.25%) sits within 25 bps of Taylor Rule equilibrium (4.00%), confirming central banks have reclaimed control without inducing severe labor market destruction (4.1% unemployment).
+                - **Global Currency Carry Shifts:** The narrowing rate differential between the Federal Reserve and the Bank of Japan (BOJ normalizing toward 0.75%) triggers ongoing volatility in global FX carry strategies.
+
+                #### 3. Strategic Wealth Generation Playbook
+                1. **Deploy in Positive-Spread Regimes:** Capitalize on sovereign debt offering real yield lock-in (5–7Y duration).
+                2. **Own Pricing-Power Monopolies:** In non-inflationary expansions, mega-cap quality compounders expand EBITDA margins faster than nominal GDP.
+                3. **Interactive Visual Dashboard:** Explore the new **Macro** tab in the bottom bar to switch between 10 sovereign nations, test 1Y–10Y horizons, and scrub interactive Canvas indicator curves!
+                """.trimIndent()
+            }
+            lower.contains("monte carlo") || lower.contains("stochastic") || lower.contains("probability distribution") || lower.contains("simulat") -> {
+                """
+                ### CladRb Stochastic Lab: Monte Carlo Wealth Projection & Probability Distributions
+
+                Welcome to stochastic calculus in action. Deterministic linear models fail because asset returns are governed by multiplicative Geometric Brownian Motion (GBM) with volatility drag.
+
+                #### 1. Stochastic Formulation & Ito's Lemma
+                dS_t = μ S_t dt + σ S_t dW_t
+                Under Ito's Lemma, discrete logarithmic compounding follows:
+                S_T = S_0 exp((μ - 0.5 σ²) T + σ sqrt(T) Z)
+
+                - **Drift Drag Penalty:** -0.5 σ². A portfolio with 20% annual volatility suffers a **-2.0% annual compounding penalty** relative to its arithmetic mean return!
+                - **Stochastic Innovations (Z):** We calibrate using leptokurtic **Student-t fat-tail distributions (ν = 5)** to capture black-swan shocks rather than underestimating tail risk with naive Gaussian assumptions.
+
+                #### 2. Representative 10-Year Monte Carlo Simulation (${'$'}100k Capital + ${'$'}500/mo)
+                | Percentile Band | Outcome Category | Projected Terminal Wealth | Effective CAGR | Probability Interpretation |
+                | :--- | :--- | :--- | :--- | :--- |
+                | **95th Percentile** | Bull Market Outlier | **${'$'}648,200** | **15.4%** | Favorable right-skewed compounding |
+                | **75th Percentile** | Optimistic Growth | **${'$'}462,000** | **11.8%** | Target goal exceeded |
+                | **50th Percentile (Median)** | **Expected Outcome** | **${'$'}358,400** | **9.2%** | Realized compounding center |
+                | **25th Percentile** | Conservative Subdued | **${'$'}278,000** | **6.8%** | Headwinds & minor drawdowns |
+                | **5th Percentile** | **Stress / Downside Floor** | **${'$'}194,500** | **3.8%** | Severe early sequence-of-returns drawdown |
+
+                #### 3. Strategic CladRb Directives
+                1. **Goal Probability:** Your likelihood of reaching a ${'$'}350,000 milestone sits at **56.8%**.
+                2. **Capital Loss Probability:** Risk of ending below total principal invested (${'$'}160k) is under **3.5%**.
+                3. **Interactive Lab:** Switch to the new **Monte Carlo** tab in the bottom bar to adjust initial capital, volatility, contributions, and scrub the interactive probability distribution histogram and trajectory cone!
+                """.trimIndent()
+            }
             lower.contains("markowitz") || lower.contains("portfolio") || lower.contains("frontier") || lower.contains("sharpe") -> {
                 """
                 ### CladRb Quantitative Dossier: Modern Portfolio Theory Optimization

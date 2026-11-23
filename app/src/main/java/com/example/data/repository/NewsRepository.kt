@@ -363,7 +363,7 @@ class NewsRepository(
 
             val impactData: ImpactTuple = when {
                 // Rate / Inflation headlines
-                lowerText.contains("rate") || lowerText.contains("inflation") || lowerText.contains("treasury") || lowerText.contains("yield") || lowerText.contains("fed") -> {
+                lowerText.contains("interest rate") || lowerText.contains(" rate ") || lowerText.contains("rates") || lowerText.contains("inflation") || lowerText.contains("treasury") || lowerText.contains("yield") || lowerText.contains("fed") -> {
                     when (ticker) {
                         "TLT" -> ImpactTuple(
                             direction = ImpactDirection.BEARISH,

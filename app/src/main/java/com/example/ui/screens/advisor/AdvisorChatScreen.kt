@@ -29,6 +29,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.AutoGraph
 import androidx.compose.material.icons.filled.CleaningServices
+import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.QueryStats
 import androidx.compose.material.icons.filled.Security
 import androidx.compose.material.icons.filled.ShowChart
 import androidx.compose.material.icons.filled.Timeline
@@ -119,6 +121,17 @@ fun AdvisorChatScreen(
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 ScenarioChip(
+                    title = "Global Macro Indicators",
+                    icon = Icons.Default.Public,
+                    accentColor = LilacAccent,
+                    onClick = {
+                        viewModel.sendMessage(
+                            "As CladRb, analyze current global economic indicators across inflation rates, central bank interest rates, real GDP growth, and unemployment figures. What are the potential market implications across asset classes?",
+                            "GLOBAL_MACRO"
+                        )
+                    }
+                )
+                ScenarioChip(
                     title = "Markowitz Frontier",
                     icon = Icons.Default.AutoGraph,
                     accentColor = LilacAccent,
@@ -126,6 +139,17 @@ fun AdvisorChatScreen(
                         viewModel.sendMessage(
                             "Optimize a 4-asset portfolio (NVDA, MSFT, SPY, TLT) using Markowitz Mean-Variance theorem. What is the tangency portfolio weights and maximum Sharpe Ratio?",
                             "MARKOWITZ"
+                        )
+                    }
+                )
+                ScenarioChip(
+                    title = "Monte Carlo Simulation",
+                    icon = Icons.Default.QueryStats,
+                    accentColor = LilacAccent,
+                    onClick = {
+                        viewModel.sendMessage(
+                            "Run a 10-year Monte Carlo simulation with Geometric Brownian Motion stochastic drift for a \$100,000 portfolio with \$500/month contributions, 10% expected return, and 18% volatility. What is the probability distribution of terminal outcomes and likelihood of reaching \$350,000?",
+                            "MONTE_CARLO"
                         )
                     }
                 )
